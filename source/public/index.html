@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>I must call my grandmother</title>
+    
+    <style>
+        html {
+            background: #000;
+            text-align: center;
+        }
+        canvas {
+            background: #000;
+            image-rendering: -moz-crisp-edges;         /* Firefox */
+            image-rendering: -webkit-crisp-edges;      /* Webkit */
+            -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+            image-rendering: pixelated;                /* Chrome */
+        }
+        #nm {
+            display: none;
+            margin: -150px auto;
+            width: 256px;
+            height: 144px;
+            transform: scale(1)
+        }
+        #ni {
+            margin:25px auto;
+        }
+        #btn {
+            margin: 0 0 70px;
+        }
+        img {
+            display: none;
+        }
+        @media only screen and (min-width : 1023px) {
+            canvas {
+                margin-top: 90px;
+                transform: scale(3)
+            }
+            #nm {
+                transform: scale(3)
+            }
+        }
+    </style>
+</head>
+<body>
+    <p id="btn">
+        <a href="/stat" target="_blank">High scores</a>
+    </p>
+    <div>
+        <canvas width=256 height=144></canvas>
+        <div id="nm" width=256 height=144>
+            <input type="text" id="ni" placeholder="Your name..."><button id="nb">GO!</button>
+        </div>
+    </div>
+
+<svg onload="with(window.snd = new AudioContext)with(createScriptProcessor(k=8192,t=0,1))connect(destination),onaudioprocess=x=>{for(i=0;i<k;t+=2e-5)x.outputBuffer.getChannelData(0)[i++]='data:audio/wav;base64,UklGRl9vT19XQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgA'.charCodeAt(i%7)*t%.1*(1-t/(9+Math.tan(i%7))%1)}" id="snd"></svg>
+    
+ <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAKBAMAAAByAqLJAAAAD1BMVEUAAAD///87XYRaj8hnpOXmvNwrAAAAAXRSTlMAQObYZgAAADxJREFUCNcdi4ENACAIwxbiA+gDqFwAF/D/Uw6XJc2WFIwcQzcDbnBd8BVFnK1KSBETsj8w+Bl6Tko3qT69eQVajbGSjQAAAABJRU5ErkJggg==" id="s">
+  
+   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAhCAMAAACP+FljAAAA/1BMVEVtKwAAETtRIAAQFUgMGz8ACij9/+QRIlUDHkoAAAAOJk4ADjITNGgSN2ISGE8PFEcADzoKMWARIFMOGEIADS8ABhcaVIAQUHsAPWAEFDwAETwcV38ZU3wVUnwJP2wUGlQNF0UACSb4+uQEW4wEWYoMQnACNlkHIEoDGEMGFj0HTXkIKFIOF0sHIEQAGToADDYAGzQAFjL9/ujz9uPm7eDb5te3zcmApK5jiZ9IepQAR24CQmsENF4KLlsHKFYQI1IEJkQAHTsMEjkADzTp7+DC0sqOq7NylaQLYqEZTnwFO2UHM1gEMFMEMFIPKlIPHEoPFkUEIj0AHT0ADCwACB3E3zV5AAABmElEQVQ4y43Rh3aCMBSA4dDYxAKRIAgFhVL3Ht17773e/1maeGlqa237Hz3mmo+gBzT3R0i8fmsM5ieCQQVg4QtYli3KFDCM10KhMBwO+6M+enFdY5wrMgAU3sS+1j8+Ho0MxDk3Tl331NA0rqVA+4wjvlitVisfswKqdBgMBtVKpbIzE/xxQhiGswEPs1A4AboToJlVNX88QWwc2La9fyDFNAhRVuzGUVSzbSE4AN4KMplMoHHebCDGmL9ZLvsRY7reANAKAnFxELRajQayaxdEtu7H8d4egIxK1xErbmxsb5cJKRfZg/4V1Ou7uyhaJ2l+iaXgt6ZvUToTF6+tlUokghOmf8PqVntlhZDVItNTkDiJI0ru7273UexdknFFrxbfAHCeer1ep9NxnMdDZJre1jkhm75fo/QQgGVZGGP5xl1ETbPd9jzv2qSUYgBYZVlohwoio99B0q3XBciL7/Mi+YFTcHKSHB09A0M4T6G8vKc6QSUHqqYZ4MqE9f9PWMrlxB/I5ZbEQgJYYUusACxMBIPqH0/zHfRcK9fSW0IPAAAAAElFTkSuQmCC" id="m">
+   
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAAAgAQMAAADg7OJmAAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAACtJREFUKM9jIAz4/6OAD5gC9qgCf0YFCAkQDlOGP2jRgCnwgaDAAUwBEgEApfBSVsdZSG0AAAAASUVORK5CYII=" id="b">
+    
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAAAUAgMAAAAfCVzlAAAACVBMVEUAAABXAABXAFMJeen0AAABC0lEQVQoz6zQMQrEIBCF4R8rmVOErSSnFMucYthqeKdcowSUtDvFa/xwHsMck3MqTrU7KpLJhTnLmKIjnfre4UiXQtViQ2QKqZRPTYUD5yJ7tbyi5EE5WkdN1hzXZS/EUZmoptSgv7+Rue9IRu5hvqFnndpAY12P2IsPxPMTHY32a3EFNo8jBONgI/jv/MoYoxSGgRCIjhD/U1jvs97AgHP/q9SuTRcahDc4PIYMEsI0eiNs5UaCTHIKabwaaZ0bCBwRU6YMvBo68H1GN47wJTmrcm+clWdaPatuCSXJv1TXcy2ZluQD16q21Eu4lqQH5B55SAXe0pRbmvqR0FLXMKYkQCqjkbpS49e8AZGIfqdOjLbMAAAAAElFTkSuQmCC" id="t">
+
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAARVBMVEUAAAA/f1FPoWZcu3fyxKxELiC3ai8wIBfyroubWic5hM4xcrJaOyVPNScdRWwmWYsAAAArWDjam3tijc4bQGRUPzA9Jxjjg8FaAAAAAXRSTlMAQObYZgAAAdNJREFUSMeVlYtuq0AMRLFhu7APSNLe/v+nXuO0jL2WkLoSVY+Zs5GisTL9nI9tk78XnWcLfDPYhNfAd4FtXZdfkP+UX68QAK/LcjHxm4mHADAJWqELQ0AAnIgoGSELZwhDYJrnNMtDl0BZODMNgciXoYJyCCiyFxKJwNnkeRBImCH0lGeGEALishxSfhsnXxQC60LKKyKlFIAESqm1JgTefOG/r6+qAgJ1mhAI3I7jj4I83ng8HvpEhtSaxZu6Y7L5PBB1R2CTifmWPrTuk5nEuq+4gFjbzZOZyMAJT1LG61FYvDANgtYdQjonTOCUn0RshLO+EJIKM8ra+5mfzYUqmIBuDDilJ+VR4AzuXQQm8Ch0eT0KfCck0tdmkIkIKCwDCKi7rd/h+LMIm77XwShlP0yifZYqfNt3KzQRph2MtkMo38fkz75b0rI7/gZgIUL/bZ1D32P/7/dDTuh/3A+l84L3+9cr9D/uBzN+DohD/+N+0GnoAHn0P+6HGkkHyHdilA37YZiGhUmu/93sR7xBDd//jv0YBhByZgi6Dk5I2Q+S/sZZVh1HmMk3q5RqWevu2A2aYPUX1DJwdUKt9fBVbs3zPn6mX48m5fccNmB3CAj8HxLFFTqYMpG/AAAAAElFTkSuQmCC" alt="" id="h">
+
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAQCAMAAAB9TOwNAAAAPFBMVEUAAABWcjxsmETG0bukr5yYoZBafzgbQWooTG9MbC81RySmZZ1EXC/Op8kUL0yetIG9irZvh1c2SyOrv46aoiU7AAAAAXRSTlMAQObYZgAAAN5JREFUKM+lzN2ywiAMBOAFwq8tHj3v/66GhgjChRdmpu032U3x6wRz+zsnCVnnwEgXWmtuj0VgnQ+F2dJxwjSTBr+nMCEsGtzTjWYT81tqrrdrQ010EbA8IXiChmuPpGdGUW/4mGMK3kND+ug5MbjopTiINs75dgwJae6pm7xrRRpsAjki//4LzT31EM0Skt/T7TgSxUiXogqM6CVlLKlQlFJdhcSjqGlPNa5HsbI8Su2CjUdS1br0YBM/6Dchd6CLv0e5cA/5+Zx7suRG391zFqjA31JUevtO/3PmPV5+/Ap9BfTPPAAAAABJRU5ErkJggg==" id="z">
+
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAKCAMAAAB8Kas2AAAAOVBMVEUAAABWcjxsmETG0btafzikr5yYoZAbQWooTG+mZZ3Op8k1SCMUL0xEXC+9irZvh1dMbC+etIGrv47qMigNAAAAAXRSTlMAQObYZgAAAMZJREFUKM+dkdEOgyAMRSm0FAUn2/9/7AoqZSSSzD55DveWGEwZhOW1mmuUVQivI475ibAWln3CRnjdfxGm+XGhCJiwimd5A4gTVvE0LwKmLOL/PHTfrgwpUxXd/1pEr+cav+tT34dxwbVRn5SI0PvhPrrtu8Poi3hd0Auj45zXC8wRp5t+M6Yb7xwTcdriiczEvMVkzwA5YctbOK/jiim1emlIXfK6wNZ0MyEkWTkQtvMQAmYxFQq9McfYjmtji6hxSXxyNl/WiAe2FJYfsgAAAABJRU5ErkJggg==" id="z2">
+
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAgCAMAAAAsVwj+AAAANlBMVEVNOTVeRkGoAABrUEtPT09hYWF3W1Zzc3OAgIBXQDyPAADLy8tCQkJaWlqTk5NkSkZsbGw1NTWnflGvAAAAbklEQVQokZ2O4QqAIAwGXdPUaNb7P23OtX74BUEH7uTAYVgmwo+wTWBoSmkPGPJZsqJTrxiSIbfTS4giEnXIuGKIyq5njIiBKHSI3BiYbboxUB3vyI2hdvq26sbATGyYMei+da3kxvDNYf9nN4QLLH8Jl++NSJoAAAAASUVORK5CYII=" id="f">
+
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAADFBMVEW6urq+vr7CwsLGxsbVZI+1AAAAQ0lEQVQI12MIZWAMYfgvGvyHYZVo0AoGMAgMFXVlWLRKqxXC/V9//y/DqqxZK4HsEAYG15D/okBilSiq4i6GoFWirgBTvxUi5Yfc7wAAAABJRU5ErkJggg==" id="w">
+
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAPCAMAAADu1H4BAAAAElBMVEUAAAAnGhNEKx9WNiXhrkm7kj5uuzQkAAAABnRSTlMA//////96eeD+AAAAMklEQVQImYWKuREAMAzCwMT7rxz81IkKTgcAhKmgTEsYbvuZ8jQJLpDqI0HzEWIkHnIBKB0AlREMHeQAAAAASUVORK5CYII=" id="o1">
+
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAANBAMAAABWYCMqAAAAG1BMVEUAAAADVIQCc7UBOlsAiNUDX5bLikl9VSxjQiGsdegHAAAAAXRSTlMAQObYZgAAAFhJREFUCNdty7ENgDAMRNFLRxkbGMAXZQDiCZBYgCzBBtSMjiyUjlf95iPJJ0PZ6Cw0SPHizZsg2Waus2YkKoXGDCxH2IHUrbNqjXclecY7wAdcD8J0/9ULux4Pz+M1Cg0AAAAASUVORK5CYII=" id="o2">
+
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAOBAMAAADpk+DfAAAAD1BMVEUAAAAcHBwuLi49PT0fHx9SE7QQAAAAAXRSTlMAQObYZgAAAC1JREFUCNdjYGBhYHBgAAIHIAMIWBzAFJMCmDI2BhLMSkBgwGAkCATKxFNQfQAb9wb6UhSCcwAAAABJRU5ErkJggg==" id="o3">
+
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAOBAMAAADH1sFNAAAAKlBMVEUAAAAuLi49PT3///8AAABFRUWXl5cfHx+6urrl5eWnp6eTkpFcXFxRT0yrFRJ0AAAAAXRSTlMAQObYZgAAAHhJREFUCNdjYGBnYCiAkUCCHU4CBQsQJAOjAIJkUFKCk0yCQKAAIRkUTS57mAgpOrfYNgsxKEabmgYLKZoaB28FckyinF1AMktBMq6phseEFHOEw0JAMibCqUKKYYbNzkBOsGcKyIC2GaZAjluKCZCT7OxqJoRiDwB1Phph1jMs1wAAAABJRU5ErkJggg==" id="o4">
+
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAAD1BMVEUwMjAnKChKTUs6OzpFR0ewa7zOAAAANElEQVQI12OAACYlJSUFKFvE2cVIkUHEyFnFkEFYxchZkUHIWcXIESziyCBsbGxsyCAIAgCaZAYuWY0XygAAAABJRU5ErkJggg==" id="o5">
+
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAJAgMAAACDNt4wAAAADFBMVEUAAABLS0tmZmaJiYkdhquIAAAAAXRSTlMAQObYZgAAABVJREFUCNdj+P+HIS2FIXIKOikaAACC3QhQdXCYIQAAAABJRU5ErkJggg==" id="o6">
+
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAJBAMAAADEGsFGAAAAHlBMVEUAAABELSA0IxhWOSkoGxJONSYdDAoKCgoAAAA6Jxsoh8wCAAAAAXRSTlMAQObYZgAAAC9JREFUCNdjEIQDIYaOjg4nJRCYqcKgKCiowAAEbAUiDMrBwTA2yeJA04BsEBABAMV5C7jTCr4HAAAAAElFTkSuQmCC" id="o7">
+
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAIBAMAAAAGrbKZAAAAElBMVEUAAAAoGxI0IxhELSAdDAoKCgpKhl5oAAAAAXRSTlMAQObYZgAAACFJREFUCNdjUDKCAgZBGGBwZVRgYGBgCTAkmsUAZIGAIQBF4wc1clFJqAAAAABJRU5ErkJggg==" id="o8">
+
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAIBAMAAAAVevJtAAAAHlBMVEUAAAA0IxhQNiVELSAsHhUOCgo1JBgfDAodDAo/LiHYRJoPAAAAAXRSTlMAQObYZgAAADlJREFUCNdjMHZxNgZhExeXycYMQkppSkogrKakNJEhUEhRUBCIQUCRIZzRgAECOAJI4TEAeTCgCABgyQunkKlh7gAAAABJRU5ErkJggg==" id="o9">
+
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAMBAMAAABCcoqQAAAAElBMVEUtHhVQNiVELiCAXxvAlg2cdxWUJ6PEAAAAIElEQVQI12NQAgIFBkZBQUEGBkZhZyAJBmjirjBxXOoBmTwDzx7dOU8AAAAASUVORK5CYII=" id="o10">
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="_libs/jsfxr.js"></script>
+    <script src="_libs/kontra.min.js"></script>
+    <script src="_libs/TinyMusic.min.js"></script>
+    <script src="g.js"></script>
+    
+    
+</body>
+</html>
