@@ -1,6 +1,6 @@
 # I Must Call My Grandmother
 
-[PLAY](https://must-call-grandma.herokuapp.com/) – [entry](http://js13kgames.com/entries/i-must-call-my-grandmother)
+[PLAY](https://must-call-grandma.herokuapp.com/) the game – See the [entry](http://js13kgames.com/entries/i-must-call-my-grandmother) at the compo site
 
 ## Context
 
